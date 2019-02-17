@@ -10,8 +10,12 @@ namespace Euler
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
+
+
             Console.WriteLine(Q5(20) + " is the smallest number divisable by 1 to 20");
+
+            Console.WriteLine("Question 7: " + Q7());
+            Console.ReadLine();
         }
 
         static int Q5(int num) //Question 5 by FreeWillie03
@@ -28,9 +32,8 @@ namespace Euler
                 }
             
             return small;
-=======
-            Console.WriteLine("Question 7: " + Q7());
-            Console.ReadLine();
+
+            
         }
 
  
@@ -56,7 +59,7 @@ namespace Euler
                 if (num % i == 0) return false;
             }
             return true;
->>>>>>> Gibson
+
         }
     }
 }
