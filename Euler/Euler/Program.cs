@@ -10,11 +10,12 @@ namespace Euler
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Question2:\nThe sum of all even fibonacci numbers which are less than 4000000 is: " + Q2(4000000)); // Question 2: Scott Burnett
 
+            Console.WriteLine("Question 5: " + Q5(20) + " is the smallest number divisable by 1 to 20"); // Question5: William Stapleton
 
-            Console.WriteLine(Q5(20) + " is the smallest number divisable by 1 to 20");
+            Console.WriteLine("Question 7: " + Q7());// Question 7: Gibson Muriithi
 
-            Console.WriteLine("Question 7: " + Q7());
             Console.ReadLine();
         }
 
@@ -29,14 +30,9 @@ namespace Euler
                         small++; i = num;
                     }
                     
-                }
-            
-            return small;
-
-            
+                }     
+            return small;    
         }
-
- 
         static long Q7()  // Gibson Euler Question 7 
         {
             int count = 0;
@@ -48,8 +44,6 @@ namespace Euler
                 num++;
             }
             return num;
-
-
         }
 
         static bool isPrime(int num)
@@ -58,8 +52,26 @@ namespace Euler
             {
                 if (num % i == 0) return false;
             }
-            return true;
+            return true; 
+        }
 
+        static int Q2(int arg)// Question 2: Scott Burnett
+        {
+            int max = 0,
+                n = 0;
+              for (int i = fib(n); i < arg; i = fib(++n))
+                if (i % 2 == 0)
+                    max += i;
+              
+            return max;
+        }//Question 2
+
+        static int fib(int arg)// Fibonacci: Scott Burnett
+        {
+            if (arg < 2)
+                return 1;
+            else
+                return (fib(arg - 2) + fib(arg - 1));
         }
     }
 }
